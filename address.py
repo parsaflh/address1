@@ -1,4 +1,4 @@
-import sqlite3
+from module import *
 house_list = [
     {"address":"tehran", "area":200, "price": 1800, "accommodation":"elevator, parking, kitchen"},
     {"address":"shiraz", "area":210, "price": 1500,"accommodation":"elevator, kitchen"},
@@ -28,11 +28,4 @@ house_list = [
 # for address in result:
 #     print("price")
 
-conn = sqlite3.connect("my_database.db")
-
-cursor = conn.cursor()
-x = cursor.fetchall()
-
-for i in x:
-    print(i)
-conn.close()
+con()
